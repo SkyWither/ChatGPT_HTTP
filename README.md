@@ -1,0 +1,2 @@
+# ChatGPT_HTTP
+ 能将ChatGPT的回复转发到本地端口，以供使用其他语言的开发者利用HTTP协议获取ChatGPT的回复。此项目依赖于acheong08/ChatGPT的项目。
