@@ -24,16 +24,19 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
         post_data = self.rfile.read(content_length)
         # 解析请求内容中的参数
         params = parse_qs(post_data.decode('utf-8'))
-        # 解析 POST 请求的内容，并提取出字符串数据
-        my_string = parse_qs(post_data.decode('utf-8')).get('my_string', [''])[0]
         # 输出解析后的参数
         # print(params)
 
         # 读取ChatGPT的回复
         prev_text = ""
-        for data in self.chatbot.ask(my_string, ):
-            prev_text = data["message"]
-        print(prev_text)
+        # 解析 POST 请求的内容，并提取出字符串数据
+        for key in params.keys():
+            # 这里只解析POST键值对的第0个数据
+            my_string = params.get(key)[0]
+            print(params.get(key)[0])
+            for data in self.chatbot.ask(my_string, ):
+                prev_text = data["message"]
+            print(prev_text)
 
         # 修改ChatGPT回复的格式
         # prev_text = '''{"text":"''' + prev_text + '''"}'''
