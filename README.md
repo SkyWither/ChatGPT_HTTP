@@ -3,7 +3,7 @@
 
 # 使用方法
 1. 打开```Pycharm```
-2. 使用```Pycharm```打开```setup.py```，进行配置，会自动安装必要依赖。
+2. 使用```Pycharm```打开```setup.py```，进行配置，安装必要依赖。
 3. 打开```main.py```修改```email```与```password```
 4. 在```Pycharm```的侧边栏```Project```下右键```main.py```，选择run
 5. 接下来，你向```127.0.0.1:8000```POST数据，就会发送到ChatGPT中
