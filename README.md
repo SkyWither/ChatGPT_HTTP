@@ -10,6 +10,7 @@
 6. ChatGPT响应后，会返回一个```response```，对```response```进行解析即可获取ChatGPT的内容了
 
 > Note
+> 
 > 如果ChatGPT文件夹为空的，请手动下载ChatGPT文件夹的内容复制到ChatGPT下，
 > 或使用git clone命令git本项目，以获取完整内容。
 
